@@ -1,0 +1,577 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    color: #211c1c;
+
+}
+
+.header {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: red;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slidRight 1s ease forwards;
+
+
+
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color: #b04343;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    /* animation: slidRight 1s ease forwards; */
+    animation: slidTop .5s ease forwards;
+    animation-delay: calc(.2s*var(--i));
+}
+
+.navbar a:hover {
+    color: #0ef;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    /* background: url() no-repeat; */
+    background: black;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slidBottom 1s ease forwards;
+    color: aliceblue;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slidBottom 1s ease forwards;
+    color: aliceblue;
+    /* animation-delay: 0.5s; */
+}
+
+.home-content p {
+    font-size: 20px;
+    opacity: 0;
+    animation: slidLeft 1s ease forwards;
+    animation-delay: 1s;
+    color: aliceblue;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    animation: slidTop 1s ease forwards;
+    animation-delay: .5s;
+}
+
+.home-content h3 span {
+    color: rgb(178, 182, 182);
+}
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgb(162, 152, 152);
+    border-radius: 50%;
+    color: #0ef;
+    text-decoration: none;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slidLeft 1s ease forwards;
+    animation-delay: calc(.2s*var(--i));
+    margin: 30px 15px 30px 0;
+}
+
+.home-sci a:hover {
+    background: white;
+    color: gray;
+    box-shadow: 0 0 20px rgb(247, 98, 98);
+}
+
+.btn-box {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 28px;
+    background: rgb(44, 24, 24);
+    border-radius: 40px;
+    font-size: 16px;
+    color: aliceblue;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    /* animation: slidRight 1s ease forwards; */
+    animation: slidTop 1s ease forwards;
+    animation-delay: 1s;
+    box-shadow: 0 0 5px rgb(92, 94, 94);
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 5px rgb(201, 130, 130),
+        0 0 25px rgb(201, 130, 130), 0 0 50px rgb(201, 130, 130),
+        0 0 100px rgb(201, 130, 130), 0 0 200px rgb(201, 130, 130);
+}
+
+@keyframes slidRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slidTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slidBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slidLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+#services{
+    color: #b04343;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+.sub-title{
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+}
+.sub-title span{
+    color: #0ef;
+}
+.container{
+    padding: 90px;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
+    margin-top: 50px;
+    grid-gap: 40px;
+   
+
+
+}
+.services-list div{
+    
+    background-color: transparent;
+    padding: 40px;
+    font-size: 12px;
+    font-weight: 13px;
+    border-radius: 20px;
+    border-right: 10px;
+    transition:  background 0.5s,transform 0.5s;
+    box-shadow: 1px 1px 20px rgb(53, 29, 210),
+    1px 1px 40px black;
+}
+
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+
+
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.read{
+    display: inline-block;
+    padding: 12px 28px;
+    background: rgb(160, 153, 153); 
+    border-radius: 40px;
+    font-size: 16px;
+    color: rgb(148, 132, 132);
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+     opacity: 2; 
+    animation: slideTop 1s ease forwards;
+    animation-delay: 1s;
+    box-shadow:0 0 5px rgb(0, 0, 0),
+    0 0 25px rgb(0, 0, 0);
+
+}
+.read:hover{
+background: rgb(73, 71, 71);
+    color: gray;
+    box-shadow: 0 0 20px rgb(247, 98, 98);
+}
+.services-list div:hover{
+    transform: translateY(-10px);
+}
+/* section{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container1{
+    width: 600px;
+    height: 500px;
+    padding: 75px 90px;
+    margin-left: 120px;
+}
+.heading1{
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+.bar{
+    font-size: 23px;
+}
+.Technical-bars .bar{
+ margin-top: 40px 0;
+}
+
+.Technical-bars .bar:first-child{
+    margin-top: 0;
+}
+
+.Technical-bars .bar:last-child{
+    margin-bottom: 0;
+}
+.Technical-bars .bars .info{
+    margin-bottom: 5px;
+}
+
+.Technical-bars .bars .info span{
+   font-size: 18px;
+   font-weight: 500;
+   animation: showText 0.5s 1s linear forwards;
+} */
+
+.about-text{
+
+    
+    padding-top: 50px;
+    margin-left: 400px;
+    margin-right: 400px;
+    font-size: 17px;
+}
+.prodetail{
+    font-size: large;
+}
+
+
+
+
+
+
+
+
+
+
+.section{
+  display: flex;
+  flex-wrap: wrap;
+}
+.container1{
+    width: 600px;
+    height: 500px;
+    padding: 75px 90px;
+    margin-left: 120px;
+}
+.heading1{
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+    color: rgb(18, 17, 17);
+}
+.bar{
+    font-size: 23px;
+    padding: 1px;
+}
+.Technical-bars bar{
+ margin-top: 40px 0;
+}
+.Technical-bars .bar:first-child{
+    margin-top: 0;
+}
+.Technical-bars .bar:last-child{
+    margin-bottom: 0;
+}
+.Technical-bars .bar .info{
+    margin-bottom: 5px;
+}
+.Technical-bars .info span{
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    
+    
+}
+.Technical-bars .bar .progress-line{
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: rgb(47, 45, 45);
+    animation:  animate 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+@keyframes animate {
+    100%{
+        transform: scaleX(1);
+    }
+}
+.Technical-bars .bar .progress-line span{
+    height: 100%;
+    background-color: rgb(15, 130, 196);
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+   
+
+}
+.progress-line.html span{
+   width: 90%;
+    
+}
+.progress-line.css span{
+    width: 70%;
+     
+ }
+ .progress-line.java span{
+    width: 80%;
+     
+ }
+ .progress-line.python span{
+    width: 80%;
+     
+ }
+ .progress-line.sql span{
+    width: 60%;
+     
+ }
+ .progress-line span:after{
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #000;
+    color: #2e2a2a;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+    right: -20px;
+ }
+
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+.contact{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:3rem;
+    align-items: center;
+    padding-left: 30px;
+    padding-top: 130px;
+}
+.contact-text h2{
+    font-size: 90px;
+    line-height: 1;
+    text-align: center;
+}
+.contact-text h2 span{
+    color: darkslategrey;
+}
+.contact-text h4{
+    margin: 15px 0;
+    color: #070707;
+    font-size: 20px;
+    font-weight: 600;
+}
+.contact-text p{
+    margin-bottom: 2rem;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+}
+.contact-list{
+    margin-bottom: 3rem;
+}
+
+.contact-list li{
+    margin-bottom: 10px;
+    display: block;
+}
+.contact-list i{
+    display: inline-block;
+    color: #211c1c;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all .40s ease;
+}
+.contact-list li a:hover{
+    transform:scale(1.01) translateY(-5px);
+    color: #b04343;
+    
+}
+.contact-icons i{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid red;
+  font-size: 2px;
+  color:black ;
+  text-decoration: none;
+  margin: 30px 15px 30px 0;
+  transition: .5s ease;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+
+}
+.contact-icons i:hover{
+    background-color: #0ef;
+    color: black;
+    box-shadow:  0 0 20px #0ef;
+}
+.contact-form form{
+    position: relative;
+}
+
+.contact-form form input, form textarea{
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 18px;
+    background: #2e2a2a;
+    color: #000;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+
+
+}
+.contact-form textarea{
+    resize: none;
+    height:  200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
