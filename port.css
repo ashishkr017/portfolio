@@ -44,7 +44,7 @@ body {
     color: #b04343;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 35px;
+    margin-left: 15px;
     transition: .3s;
     opacity: 0;
     /* animation: slidRight 1s ease forwards; */
@@ -62,12 +62,12 @@ body {
     justify-content: space-between;
     height: 100vh;
     /* background: url() no-repeat; */
-    background: black;
+    background-color: black;
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
-    padding: 70px 10% 0;
+    padding: 70px 5% 0;
 }
 
 .home-content {
@@ -220,7 +220,7 @@ body {
     color: #0ef;
 }
 .container{
-    padding: 90px;
+    padding: 20px;
 }
 .services-list{
     display: grid;
@@ -234,7 +234,7 @@ body {
 .services-list div{
     
     background-color: transparent;
-    padding: 40px;
+    padding: 20px;
     font-size: 12px;
     font-weight: 13px;
     border-radius: 20px;
@@ -332,12 +332,14 @@ background: rgb(73, 71, 71);
 
     
     padding-top: 50px;
-    margin-left: 400px;
-    margin-right: 400px;
+    margin-left: 20px;
+    margin-right: 20px;
     font-size: 17px;
 }
 .prodetail{
     font-size: large;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 
@@ -457,11 +459,13 @@ background: rgb(73, 71, 71);
 
 .contact{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    /* grid-template-columns: repeat(2,1fr); */
+    grid-template-columns: 1fr;
     gap:3rem;
     align-items: center;
-    padding-left: 30px;
-    padding-top: 130px;
+    /* padding-left: 30px;
+    padding-top: 130px; */
+    padding:20px;
 }
 .contact-text h2{
     font-size: 90px;
@@ -541,6 +545,7 @@ background: rgb(73, 71, 71);
     font-size: 1rem;
     margin-bottom: 0.5rem;
     border-radius: 0.5rem;
+    width: 100%;
 
 
 }
@@ -548,6 +553,65 @@ background: rgb(73, 71, 71);
     resize: none;
     height:  200px;
 }
+
+
+/* Add a media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .header {
+        padding: 20px 5%; /* Adjust padding for smaller screens */
+    }
+
+    .navbar a {
+        margin-left: 15px; /* Adjust margin for smaller screens */
+    }
+
+    .home {
+        padding: 70px 5% 0; /* Adjust padding for smaller screens */
+    }
+
+    .home-content {
+        max-width: 100%; /* Make content full width on smaller screens */
+    }
+
+    .btn-box,
+    .home-sci a {
+        margin: 15px 0; /* Adjust margin for smaller screens */
+    }
+
+    .container {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .services-list div {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .about-text,
+    .prodetail {
+        margin-left: 20px;
+        margin-right: 20px; /* Adjust margin for smaller screens */
+    }
+
+    .contact {
+        grid-template-columns: 1fr; /* Change to a single column layout for smaller screens */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .contact-text h2 {
+        font-size: 40px; /* Adjust font size for smaller screens */
+    }
+
+    .contact-icons i {
+        margin: 15px 0; /* Adjust margin for smaller screens */
+    }
+
+    .contact-form form input,
+    .contact-form form textarea {
+        width: 100%; /* Make inputs full width on smaller screens */
+    }
+}
+
+
 
 
 
