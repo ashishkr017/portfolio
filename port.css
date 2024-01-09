@@ -58,7 +58,7 @@ body {
 
 .home {
     position: relative;
-    width: 300%;
+    width: 100%;
     justify-content: space-between;
     height: 100vh;
     /* background: url() no-repeat; */
