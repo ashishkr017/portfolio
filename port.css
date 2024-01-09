@@ -58,7 +58,7 @@ body {
 
 .home {
     position: relative;
-    width: 100%;
+    width: 300%;
     justify-content: space-between;
     height: 100vh;
     /* background: url() no-repeat; */
@@ -358,7 +358,7 @@ background: rgb(73, 71, 71);
 .container1{
     width: 600px;
     height: 500px;
-    padding: 75px 90px;
+    padding: 7px 90px;
     margin-left: 120px;
 }
 .heading1{
